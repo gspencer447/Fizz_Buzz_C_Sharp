@@ -1,18 +1,28 @@
-
-public static string fizzBuzz(int number)
+namespace Fizzbuzztest
 {
-    if (number % 3 == 0)
+    internal class Program
     {
-        return "fizz";
-    }
-
-    if (number % 5 == 0)
-    {
-        return "buzz";
-    }
-    
-    if (number % 3 == 0 && number % 5 == 0)
-    {
-        return "fizzbuzz";
+        public static string FizzBuzz(int number)
+        {
+            if (number % 3 == 0 && number % 5 == 0)
+            {
+                return "fizzbuzz";
+            }
+            else if (number % 3 == 0)
+            {
+                return "fizz";
+            }
+            else if (number % 5 == 0)
+            {
+                return "buzz";
+            }
+            return number.ToString();
+        }
+        static void Main(string[] args)
+        {
+            int number = 15;
+            string result = FizzBuzz(number);
+            Console.WriteLine(result);
+        }
     }
 }
